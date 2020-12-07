@@ -29,7 +29,6 @@ void CSoftwareDlg::DoDataExchange(CDataExchange* pDX)
 	//}}AFX_DATA_MAP
 }
 
-
 BEGIN_MESSAGE_MAP(CSoftwareDlg, CDialogEx)
 	//{{AFX_MSG_MAP(CSoftwareDlg)
 	ON_WM_SYSCOMMAND()
@@ -97,17 +96,11 @@ BOOL CSoftwareDlg::OnInitDialog()
 		if (!m_richEditCtrl.Create(WS_VISIBLE | ES_READONLY | ES_MULTILINE | ES_AUTOHSCROLL | WS_HSCROLL | ES_AUTOVSCROLL | WS_VSCROLL, rect, this, 0))
 			return FALSE;
 
-		//m_font.CreateFont(-11, 0, 0, 0, FW_REGULAR, 0, 0, 0, BALTIC_CHARSET, 0, 0, 0, 0, "Courier New");
 		m_font.CreateFont(-11, 0, 0, 0, FW_REGULAR, 0, 0, 0, BALTIC_CHARSET, 0, 0, 0, 0, "Courier New");
 		m_richEditCtrl.SetFont(&m_font);
 		m_richEditCtrl.SetBackgroundColor(FALSE, m_color);
 
-
-
 	}
-
-	
-	//init timers
 	m_nTimerID = SetTimer(0x1234, 1000, NULL);	//Used by OnTimer function to refresh dialog box & OSD
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
@@ -190,8 +183,6 @@ BOOL CSoftwareDlg::PreTranslateMessage(MSG* pMsg)
 	{
 		switch (pMsg->wParam)
 		{
-		case VK_F11:
-			return TRUE;
 		case ' ':
 			Sleep(1000);
 			return TRUE;
