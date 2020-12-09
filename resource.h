@@ -6,11 +6,11 @@
 #define IDD_ABOUTBOX                    100
 #define IDS_ABOUTBOX                    101
 #define IDD_SOFTWARE_DIALOG             102
+#define IDS_STRING102                   102
 #define IDR_RC1                         138
 #define IDI_ICON1                       141
 #define IDC_STATUS                      1000
 #define IDC_PLACEHOLDER                 1002
-
 
 // Next default values for new objects
 // 
